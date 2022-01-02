@@ -7,7 +7,6 @@ from pygame.locals import *
 import time
 import math
 import random
-import random
 
 from itertools import combinations
 import statistics
@@ -125,7 +124,7 @@ class App:
         self.space.debug_draw(self.draw_options)
         # Texto:
         font = pygame.font.SysFont("comicsans", 50)
-        img = font.render(f"Seconds: {int(self.seconds)}", True, RED)
+        img = font.render("Seconds: " + int(self.seconds), True, RED)
         self.screen.blit(img, (800,20))
         prev_seconds = self.seconds
         self.seconds = ((time.time() - self.startTime))
